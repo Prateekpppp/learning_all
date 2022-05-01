@@ -6,8 +6,9 @@ const data = require('./data');
 // }).listen(2000);
 
 const testfunc = (req,res)=>{
-    res.write('<h1>hii testing3</h1>');
+    res.writeHead(200,{'Content-Type': 'Application/json'});
+    res.write(JSON.stringify(data));
     res.end();
 }
 
-http.createServer(testfunc).listen(1300);
+http.createServer(testfunc).listen(1400);
