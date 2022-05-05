@@ -11,4 +11,5 @@ app.get('/about',(req,res)=>{
 app.get('*',(req,res)=>{
     res.sendFile(`${htmlpath}/nopage.html`);
 });
+
 app.listen(2000);
