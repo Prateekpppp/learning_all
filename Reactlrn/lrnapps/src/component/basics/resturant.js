@@ -13,7 +13,7 @@ const Resturant = () => {
     const itemList = Menu.filter((curelement)=>{
       return curelement.category === category;
     });
-    // console.log(itemList);
+    console.log(itemList);
     setMenu(itemList);
   } 
   return (

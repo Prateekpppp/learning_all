@@ -720,4 +720,23 @@ def rmspchar(str):
 
 #
 # s2 =input('enter str2: ')
-s1 =input('enter str1: ')
+# s1 =input('enter str1: ')
+
+# function to get the unique value from an array or string
+def uniquearr(arr) :
+    l = len(arr)
+    arrinp = []
+    for i in range(l):
+        l2= len(arrinp)
+        # print(l2)
+        if l2==0:
+            arrinp.append(arr[i])
+        else:
+            for j in range(l2) :
+                if arr[i] == arrinp[j]:
+                    break
+                elif j==l2-1 :
+                    arrinp.append(arr[i])
+    print(arrinp)
+
+# uniquearr('appleapple')

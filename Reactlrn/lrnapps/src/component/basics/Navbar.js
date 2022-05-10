@@ -1,6 +1,6 @@
 import React from 'react'
 // import Menu from './menuapi.js';
-const Navbar = ({getItems}) => {
+const Navbar = (props) => {
     // const getItems=(category)=>{
     //     const itemList = Menu.filter((curelement)=>{
     //       return curelement.category === category;
@@ -12,10 +12,10 @@ const Navbar = ({getItems}) => {
     <>
         <nav className="navbar">
             <div className="btn-group">
-            <button className="btn-group__item" onClick={()=>getItems("breakfast")}>breakfast</button>
-            <button className="btn-group__item" onClick={()=>getItems("lunch")}>Lunch</button>
-            <button className="btn-group__item" onClick={()=>getItems("evening")}>Evening</button>
-            <button className="btn-group__item" onClick={()=>getItems("dinner")}>Dinner</button>
+            <button className="btn-group__item" onClick={()=>props.getItem("breakfast")}>breakfast</button>
+            <button className="btn-group__item" onClick={()=>props.getItem("lunch")}>Lunch</button>
+            <button className="btn-group__item" onClick={()=>props.getItem("evening")}>Evening</button>
+            <button className="btn-group__item" onClick={()=>props.getItem("dinner")}>Dinner</button>
             {/* <button className="btn-group__item" onClick={()=>setMenu(Menu)}>All</button> */}
             </div>
         </nav>
