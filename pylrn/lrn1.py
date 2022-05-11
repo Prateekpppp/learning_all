@@ -723,6 +723,23 @@ def rmspchar(str):
 # s1 =input('enter str1: ')
 
 # function to get the unique value from an array or string
+# def uniquearr(arr) :
+#     l = len(arr)
+#     arrinp = []
+#     for i in range(l):
+#         l2= len(arrinp)
+#         # print(l2)
+#         if l2==0:
+#             arrinp.append(arr[i])
+#         else:
+#             for j in range(l2) :
+#                 if arr[i] == arrinp[j]:
+#                     break
+#                 elif j==l2-1 :
+#                     arrinp.append(arr[i])
+#     print(arrinp)
+
+# testing code without append function
 def uniquearr(arr) :
     l = len(arr)
     arrinp = []
@@ -730,13 +747,13 @@ def uniquearr(arr) :
         l2= len(arrinp)
         # print(l2)
         if l2==0:
-            arrinp.append(arr[i])
+            arrinp=arrinp+[arr[0]]
         else:
             for j in range(l2) :
                 if arr[i] == arrinp[j]:
                     break
                 elif j==l2-1 :
-                    arrinp.append(arr[i])
+                    arrinp=arrinp+[arr[i]]
     print(arrinp)
 
 # uniquearr('appleapple')
