@@ -5,10 +5,22 @@ const Todo = () => {
     const [val,setvalue] = React.useState('');
     const [item,setItem] = React.useState([]);
     const additem=()=>{
-        setItem([...item,val]);
-        // console.warn(item);
+        if(!val){
+            alert('please fill data');
+        }else{
+            setItem([...item,val]);
+            setvalue('');
+        }
         // return item;
     };
+    const del =(elem)=>{
+        console.warn(item);
+        const updateitem=item.filter((curelem)=>{
+            return curelem !== elem;
+        });
+        setItem(updateitem);
+    };
+    
     return (
         <>
             <div className='main-div'>
@@ -25,7 +37,7 @@ const Todo = () => {
                         <i className='fa fa-plus add-btn' onClick={additem}></i>
                     </div>
                     <div className='showItems'>
-                        <Todoitems item={item} />
+                        <Todoitems item={item} del={del} />
                     </div>
                     <div className='showItems'>
                         <button className='btn effect04' data-sm-link-text="Remove All"><span>List Item</span></button>
