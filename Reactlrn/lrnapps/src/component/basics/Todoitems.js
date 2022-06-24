@@ -12,7 +12,7 @@ const Todoitems = (props) => {
       <>
         {props.item.map((curelem,i)=>{
           return(
-              <div className='eachItem' key={i}>
+              <div className='eachItem'>
               <h3>{curelem}</h3>
               <div className='todo-btn'>
                   <i className='far fa-edit add-btn'></i>

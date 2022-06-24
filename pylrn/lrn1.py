@@ -416,7 +416,7 @@ def fml (char) :
 
     return char[0]+char[m]+char[l-1]
 
-# fml(str)
+# fml('str')
 
 
 
@@ -757,3 +757,61 @@ def uniquearr(arr) :
     print(arrinp)
 
 # uniquearr('appleapple')
+
+
+# position of occurance of a string a string
+def indx(srch, strng) :
+    ps = 0
+    c = 0
+    cntstr = 0
+    for i in range(len(srch)) :
+        for j in range(ps,len(strng)) :
+            if srch[i] == strng[j] :
+                c+=1
+                ps = j+1
+                cn+=1
+                break
+            elif c == 0 :
+                cn = 0
+            else :
+                cn = 0
+                break
+        # if i == len(srch)-1 and cn == 0 :
+        #     print('no match')
+        # elif 
+    if cn == 0 :
+        print('no match')
+    else :
+        cntstr += 1
+        print(ps-len(srch))
+
+# indx('le','this apple')
+
+
+# no. of occurance of string in a string
+
+def strtimes(srch, strng) :
+    ps = []
+    cnt = 0 
+    for i in range(len(strng)) :
+        for j in range(len(srch)) :
+            if strng[i+j] != srch[j]:
+                break
+            elif j == len(srch)-1 :
+                ps.append(i)
+                cnt +=1
+    print(ps,cnt)   
+# strtimes('le','le john le apple')
+
+def mxstr (s1,s2) :
+    i = 0
+    z = len(s2) -1
+    str = ''
+    while(i < len(s1)):
+        str += s1[i]+s2[z-i]
+        i+=1
+    print(str)
+
+
+
+
