@@ -8,11 +8,11 @@ import Todo from './component/basics/Todo';
 
 function App() {
   return (
-      // <Resturant />
+      <Resturant />
       // <Usestate />
       // <Useeffect />
       // <Usereducer />
-      <Todo />
+      // <Todo />
   );
 }
 
