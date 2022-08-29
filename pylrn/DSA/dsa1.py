@@ -166,7 +166,39 @@ def pattern13():
         if i >=row:
             k-=1
         print('\r')
-pattern12()
+# pattern13()
 
+def pattern14():
+    for i in range(2*row):
+        if i<row:
+            for j in range(2*row):
+                if j >=row-i-1 and j<row+i:
+                    print('*',end=' ')
+                else:
+                    print(' ',end=' ')
+        else:
+            for j in range(2*row):
+                if j >=i-row+1 and j<2*row-(i-row)-2:
+                    print('*',end=' ')
+                else:
+                    print(' ',end=' ')
+        print('\r')
+# pattern14()
 
+# def pattern15():
+#     dist = 10
+#     # x = ''
+#     x = []
+#     while dist > 0 :
+#         if dist%2 == 0 :
+#             x.append(0)
+#             # x = x + '0'
+#         if dist%2 != 0 :
+#             # x = x + '1'
+#             # dist = dist/2
+#             x.append(1)
+#         dist = int(dist/2)
+#     print(x)
+
+# pattern15()
 
