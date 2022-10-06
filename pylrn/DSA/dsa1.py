@@ -138,14 +138,16 @@ def pattern11():
 def pattern12():
     for i in range(row):
         for j in range(2*row-1):
-            if j<row and j>=row-i-1 and j<row+i:
-                print(row-j,end='')
-            if j>=row and j>=row-i-1 and j<row+i:
-                print(j-row+2,end='')
-            # if j>=row-i-1 and j<row+i:
-            #     print(row-j,end=' ')
-            else:
-                print(' ',end=' ')
+            if j<row :
+                if j < row - i - 1:
+                    print(' ',end='')
+                else :
+                    print(row-j,end='')
+            else :
+                if j >= row + i :
+                    print(' ',end='')
+                else :
+                    print(j-row+2,end='')
         print('\r')
 # pattern12()
 
@@ -185,20 +187,39 @@ def pattern14():
         print('\r')
 # pattern14()
 
-# def pattern15():
-#     dist = 10
-#     # x = ''
-#     x = []
-#     while dist > 0 :
-#         if dist%2 == 0 :
-#             x.append(0)
-#             # x = x + '0'
-#         if dist%2 != 0 :
-#             # x = x + '1'
-#             # dist = dist/2
-#             x.append(1)
-#         dist = int(dist/2)
-#     print(x)
+def pattern15():
+    dist = 10
+    # x = ''
+    x = []
+    while dist > 0 :
+        if dist%2 == 0 :
+            x.append(0)
+            # x = x + '0'
+        if dist%2 != 0 :
+            # x = x + '1'
+            # dist = dist/2
+            x.append(1)
+        dist = int(dist/2)
+    print(x)
 
 # pattern15()
+
+def pattern16():
+    for i in range(1,row+1,1):
+        for j in range(1,2*row,1):
+            if j <= row :
+                if j == row-i+1 :
+                    print(j,end='')
+                else :
+                    print(' ',end='')
+            if j>row :
+                if j == row+i-1 :
+                    print(j,end='')
+                else :
+                    print(' ',end='')    
+        print('\r')
+
+pattern16()
+
+
 
