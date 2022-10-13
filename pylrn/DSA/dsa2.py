@@ -48,5 +48,37 @@ def dsa5(v1,v2) :
             n +=1          
     print(cnt)
 
-dsa5(3,9)
+# dsa5(3,9)
+
+def linear_seraching(num,arr) :
+    for i in range(len(arr)) :
+        if arr[i] == num :
+            print(i)
+            break
+        if i == len(arr)-1 :
+            print('not available')
+
+# linear_seraching(43,[1,2,4,3,45,56,23])
+
+def swapping(x,y):
+    # t=x
+    # x = int((x+y - (x-y))/2)
+    # y = int((t+y + (t-y))/2)
+    x = x+y
+    y = x-y
+    x = x-y
+# swapping(4,5)
+
+def selection_sorting(arr) :
+    for i in range(0,len(arr)-1):
+        # break
+        for j in range(i+1,len(arr)):
+            if arr[i] > arr[j] :
+                swapping(arr[i],arr[j])
+                arr[i] = arr[i]+arr[j]
+                arr[j] = arr[i]-arr[j]
+                arr[i] = arr[i]-arr[j]
+    # print(arr)    
+
+# selection_sorting([1,2,4,3,45,56,23])
 

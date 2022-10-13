@@ -196,17 +196,17 @@ def armstrong(n) :
 
 def swap(x,y) :
 
-    # x = x+y
+    x = x+y
 
-    # y= x-y
+    y= x-y
 
-    # x= x-y
+    x= x-y
 
-    temp = x
+    # temp = x
 
-    x= y 
+    # x= y 
 
-    y= temp
+    # y= temp
 
 
 
